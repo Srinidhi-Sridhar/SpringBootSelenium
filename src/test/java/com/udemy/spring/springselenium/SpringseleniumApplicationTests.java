@@ -12,31 +12,4 @@ import java.util.List;
 @SpringBootTest
 class SpringseleniumApplicationTests {
 
-	@Autowired
-	private User user;
-
-	@Value("${PATH}")
-	private String path;
-
-	/*@Value("${name}")
-	private List<String> Name;*/
-
-	@Value("${testURL:https://www.google.com}")
-	private String Name2;
-
-	@Value("${list}")
-	private List<String> list;
-
-	@Autowired
-	private Faker faker;
-
-	@Autowired
-	private GetList gl;
-
-	@Test
-	void contextLoads() {
-		//System.out.println(this.list);
-		//Faker faker = new Faker();
-		System.out.println(gl.list());
-	}
 }

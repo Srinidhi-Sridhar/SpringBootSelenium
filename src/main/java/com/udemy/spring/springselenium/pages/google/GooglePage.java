@@ -1,15 +1,19 @@
 package com.udemy.spring.springselenium.pages.google;
 
 import com.udemy.spring.springselenium.pages.BaseClass;
+import com.udemy.spring.springselenium.xalu.annotations.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
+@Page
 public class GooglePage extends BaseClass {
 
     @Autowired
     private SearchResult searchResult;
+    @Autowired
+    private SearchComponent searchComponent;
+    @Value("${application.url}")
+    private String url;
 
     public SearchResult getSearchResult() {
         return searchResult;
@@ -19,18 +23,12 @@ public class GooglePage extends BaseClass {
         return searchComponent;
     }
 
-    @Autowired
-    private SearchComponent searchComponent;
-
-    @Value("${application.url}")
-    private String url;
-
-    public void goTo()
-    {
+    public void goTo() {
         driver.get(url);
     }
+
     @Override
     public boolean isLoaded() {
-      return this.searchComponent.isLoaded();
+        return this.searchComponent.isLoaded();
     }
 }

@@ -1,3 +1,4 @@
+/*
 package com.udemy.spring.springselenium.flights;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@PropertySource("classpath:language/en.properties")
+@PropertySource("language/en.properties")
 public class FlightAppDetails {
     @Value("${flight.app.url}")
     private String appUrl;
@@ -23,3 +24,4 @@ public class FlightAppDetails {
         return appLables;
     }
 }
+*/

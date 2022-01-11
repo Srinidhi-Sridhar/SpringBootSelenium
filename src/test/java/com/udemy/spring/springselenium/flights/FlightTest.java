@@ -1,3 +1,4 @@
+/*
 package com.udemy.spring.springselenium.flights;
 
 import com.udemy.spring.springselenium.BaseTest;
@@ -25,3 +26,4 @@ public class FlightTest extends BaseTest {
 
 
 }
+*/
